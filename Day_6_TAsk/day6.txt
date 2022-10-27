@@ -1,0 +1,204 @@
+1. 
+a.
+class Movie{
+    constructor(title, studio, rating){
+        this.title=title;
+        this.studio=studio;
+        this.rating = rating;
+        
+    }
+    
+}
+------------------------------------------------------------------------------------------
+b.
+
+class Movie{
+    constructor(title, studio, rating){
+        this.title=title;
+        this.studio=studio;
+        if(rating==undefined){
+            this.rating = "PG"
+        }else{
+            this.rating=rating;
+        }
+        
+    }
+}
+ var film1 = new Movie("Casino Royale","Eon Productions","PG13");
+ var film2 = new Movie("bahubali","Ak media");
+ 
+ var array = [film1,film2];
+ for(i=0;i<array.length;i++){
+    console.log(array[i])
+ }
+
+
+
+-------------------------------------------------------------------------------------------
+c.
+
+class Movie{
+    constructor(title, studio, rating){
+        this.title=title;
+        this.studio=studio;
+        if(rating==undefined){
+            this.rating = "PG"
+        }else{
+            this.rating=rating;
+        }
+        
+    }
+    getPG(){
+        if(array[i].rating==="PG"){
+        console.log(array[i].title)
+        }
+       
+    }
+}
+ var film1 = new Movie("Casino Royale","Eon Productions","PG13");
+ var film2 = new Movie("bahubali","Ak media");
+ var film3 = new Movie("sitaramam","Vyjayanthi Production","PG");
+ var film4 = new Movie("Rocketry","SS production","PG13");
+ var film5 = new Movie("Sitara", "RR productions", "PG")
+ 
+ var array = [film1,film2,film3,film4,film5];
+ for(i=0;i<array.length;i++){
+    array[i].getPG();
+ }
+
+------------------------------------------------------------------------------------
+
+d.
+class Movie{
+    constructor(title, studio, rating){
+        this.title=title;
+        this.studio=studio;
+        this.rating = rating;
+        
+    }
+    
+}
+ var film1 = new Movie("Casino Royale","Eon Productions","PG13");
+ 
+ console.log(film1)
+ 
+ ---------------------------------------------------------------------------------------
+ 
+ 2.
+ class circle{
+    constructor(radius,color){
+        this.radius = radius;
+        this.color = color;
+        if(radius==undefined){
+            this.radius=1;
+
+        }
+        if(color==undefined){
+            this.color = "red"
+        }
+    }
+    toString(){
+        console.log(`Radius is ${this.radius} and color is ${this.color}`)
+    }
+    getRadius(){
+        console.log(this.radius)
+    }
+    setRadius(radius){
+        this.radius = radius
+    }
+    getColor(){
+        console.log(this.color)
+    }
+    setColor(color){
+        this.color = color
+    }
+    getArea(){
+        var p = Math.PI;
+        var area = p * this.radius*this.radius;
+        console.log(area)
+    }
+    getCircumference(){
+        var p = Math.PI;
+        var circumference = 2*p*this.radius;
+        console.log(circumference)
+    }
+}
+var c1 = new circle()
+c1.toString();
+
+var c2 = new circle(5.2);
+c2.toString();
+
+var c3 = new circle(3.5,"black");
+c3.toString()
+
+var c4 = new circle(6.1);
+c4.getRadius();
+
+var c5 = new circle(1.2)
+c5.setRadius(3.8);
+c5.getRadius();
+
+var c6 = new circle("pink");
+
+c6.setColor("pink");
+c6.getColor();
+
+
+var c7 = new circle(5);
+c7.getArea();
+c7.getCircumference();
+
+
+ 
+ ------------------------------------------------------------------------------------------
+ 3.
+ 
+class person{
+    constructor(name, age, height, weight, salary, city, employee_id){
+        this.name = name;
+        this.age=age;
+        this.height = height;
+        this.weight= weight;
+        this.salary= salary;
+        this.city = city;
+        this.employee_id = employee_id
+    }
+}
+
+var employee1 = new person('sandeep', 29, '5.11', 75, 600000, 'hyderabad', '5834');
+console.log(employee1);
+console.log(employee1.age);
+ -----------------------------------------------------------------------------------------
+ 4.
+ class Uber_price{
+    constructor(kilometer){
+        if(kilometer==undefined){
+             console.log(`the price is 25`)
+        }else{
+            this.kilometer=kilometer;
+            var cost = 18*kilometer;
+            var discount = 0.75*cost;
+            console.log(`the base fare is ${cost}`);
+            console.log(`the final fare is ${discount}`)
+    
+        }
+       
+    }
+    getPrice(){
+        
+        let total = 18*this.kilometer;
+        return total;
+    }
+    getDiscount(){
+        ;
+        let total = 18*this.kilometer;
+        let discount = 0.75*total;
+        return discount;
+        
+    }
+}
+var price= new Uber_price(10);
+
+console.log(`the actual fare is ${price.getPrice()}`);
+console.log(`the discounted fare is ${price.getDiscount()}`);

@@ -1,0 +1,81 @@
+1.
+
+a.
+var request = new XMLHttpRequest();
+request.open('GET',"https://restcountries.com/v3.1/all", true);
+request.send();
+request.onload = function(){
+    var data = JSON.parse(request.response);
+   
+    var region = data.filter(Element=>{
+        if(Element.continents=="Asia"){
+            console.log(Element.name.common)
+        }
+    })
+}
+--------------------------------------------------------------------------
+
+b.
+var request = new XMLHttpRequest();
+request.open('GET',"https://restcountries.com/v3.1/all", true);
+request.send();
+request.onload = function(){
+    var data = JSON.parse(request.response);
+    
+    var region = data.filter(Element=>{
+        if(Element.population<200000){
+            console.log(Element.name.common)
+        }
+    })
+}
+
+---------------------------------------------------------------------------
+
+c.
+var request = new XMLHttpRequest();
+request.open('GET',"https://restcountries.com/v3.1/all", true);
+request.send();
+request.onload = function(){
+    var data = JSON.parse(request.response);
+    data.forEach(element => {
+        console.log(element.name)
+        console.log(element.capital)
+        console.log(element.flag)
+    });
+    
+}
+----------------------------------------------------------------------------
+
+d.
+
+var request = new XMLHttpRequest();
+request.open('GET',"https://restcountries.com/v3.1/all", true);
+request.send();
+request.onload = function(){
+    var data = JSON.parse(request.response);
+    var sum =0;
+    data.reduce((acc,element)=>
+    sum+=element.population)
+    console.log(sum)
+    
+}
+----------------------------------------------------------------------------------
+
+e.
+
+var request = new XMLHttpRequest();
+request.open('GET',"https://restcountries.com/v3.1/all", true);
+request.send();
+request.onload = function(){
+    var data = JSON.parse(request.response);
+    
+    for(i=0;i<data.length;i++){
+        if(data[i].currencies=="USD"){
+            console.log(data[i].name.common)
+        
+        }
+    }
+        
+    
+    
+}
